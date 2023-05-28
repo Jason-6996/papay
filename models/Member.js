@@ -1,7 +1,5 @@
 class Member {
-  constructor() {
-
-  }
+  constructor() { }
 }
 
 
