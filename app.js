@@ -11,11 +11,26 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // 2: Session code
+// app.use(
+//   session({
+//     secret: process.env.SESSION_SECRET,
+//     cookie: {
+//       maxAge: 1000 * 60 * 30, // for 30 minutes
+//     },
+//     store: store,
+//     resave: true,
+//     saveUninitialized: true,
+//   })
+// );
+
+
 // 3: Views code
 app.set("views", "views");
 app.set("view engine", "ejs");
 
 // 4: Routing code
-app.use("/", router);
+// app.use("/resto", router_bssr); // tradiional API
+app.use("/", router);           // REST API
+
 
 module.exports = app;
