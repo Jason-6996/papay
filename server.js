@@ -5,6 +5,7 @@ const http = require("http");
 const mongoose = require("mongoose");
 
 const connectionString = process.env.MONGO_URL;
+mongoose.set("strictQuery", false);
 
 mongoose.connect(connectionString, { useNewUrlParser: true, useUnifiedTopology: true }, (err, goose) => {
   if (err) console.log("ERROR on connection MongoDB");
